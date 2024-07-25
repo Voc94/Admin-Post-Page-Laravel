@@ -26,6 +26,9 @@ class PostController extends Controller
 
     auth()->user()->posts()->create($inputs);
 
-    return back()->with('message', 'Post created successfully!');
+    return back();
 }
+    public function index(){
+        return view('admin.posts.index');
+    }
 }
